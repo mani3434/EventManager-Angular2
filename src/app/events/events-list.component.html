@@ -3,8 +3,12 @@
     <hr/>
     <div class="row">
         <div class="col-md-5" *ngFor ="let event of events">
-            <event-thumbnail  [event]="event" #thumbnail (eventClick)="handleEvent($event)"></event-thumbnail>
+            <event-thumbnail  [event]="event" (click)="handleClick(event.name)"></event-thumbnail>
         </div>
-        <!-- <h3>{{thumbnail.prop}}</h3>
+        </div>
+
+          <!-- 
+               #thumbnail (eventClick)="handleEvent($event)"
+              <h3>{{thumbnail.prop}}</h3>
     <button class="btn btn-primary" (click)="thumbnail.logfoo()"> child method</button> -->
-    </div>
+  
